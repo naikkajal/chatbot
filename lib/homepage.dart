@@ -6,7 +6,11 @@ class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: AppBar(title: Text("Allen"),),
+      appBar: AppBar(
+        title: Text("Allen"),
+        leading: Icon(Icons.menu),
+        centerTitle: true,
+      ),
     );
   }
 }
