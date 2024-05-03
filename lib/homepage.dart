@@ -11,6 +11,7 @@ class Homepage extends StatelessWidget {
         leading: Icon(Icons.menu),
         centerTitle: true,
       ),
+      body: Column()
     );
   }
 }
