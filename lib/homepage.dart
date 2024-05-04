@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+  const Homepage({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,34 @@ class Homepage extends StatelessWidget {
         leading: Icon(Icons.menu),
         centerTitle: true,
       ),
-      body: Column()
+      body: Column(
+        children: [
+          Stack(
+            children: [
+              Positioned(
+                child: Center(
+                  child: Container(
+                    height: 120,
+                    width: 120,
+                    margin: EdgeInsets.only(top: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.red, 
+                      shape: BoxShape.circle
+                    ),// Add a color to see the container
+                  ),
+                ),
+              ),
+              Container(
+                height: 123,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(image: AssetImage('assets/images/virtualAssistant.png'))
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
